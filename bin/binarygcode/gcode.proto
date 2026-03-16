@@ -1,0 +1,14 @@
+syntax = "proto3";
+option go_package = "github.com/eugen252009/printer-retrofit/bin/binarygcode";
+
+message GCodeCommand {
+  enum CommandType {
+    UNKNOWN = 0;
+    G = 1;
+    M = 2;
+  }
+
+  CommandType type = 1;
+  uint32 value = 2;
+  string params = 3;
+}
